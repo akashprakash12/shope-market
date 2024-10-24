@@ -1,0 +1,2 @@
+Name: glass	Price: 10	
+Name: PEN	Price: 5	Quantity: 20
