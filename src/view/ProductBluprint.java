@@ -4,20 +4,28 @@ public class ProductBluprint {
     private int id;
     private String name;
     private double price;
+    private double quantity;
 
     ProductBluprint() {
 
     }
 
-    ProductBluprint(int id, String name, double price) {
+    ProductBluprint(int id, String name, double price,double quantity) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.quantity=quantity;
+
 
     }
+    
 
     public int getId() {
         return id;
+    }
+    
+    public double getquantity() {
+        return quantity;
     }
 
     public String getName() {
@@ -39,13 +47,18 @@ public class ProductBluprint {
     public void setPrice(double price) {
         this.price = price;
     }
+    public void setquantity(double quantity) {
+        this.quantity = quantity;
+    }
+
 
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + price + '\'' +
+                ", quantity=" + quantity + '\'' +
                 '}';
     }
 }

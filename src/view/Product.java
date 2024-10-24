@@ -17,18 +17,19 @@ public class Product {
         nextProductId = 1;
     }
 
-    public void addProduct(String name, double price) {
+    public void addProduct(String name, double price,double quantity) {
         ProductBluprint product = new ProductBluprint();
         product.setId(nextProductId++);
         product.setName(name);
         product.setPrice(price);
+        product.setquantity(quantity);
         products.add(product);
         try {
             connection=Db.getConnection();
             int id=product.getId();
             String ProductName=product.getName();
             double ProductPrice=product.getPrice();
-            String addProduct="insert into Product (id,name,price) values('"+id+"','"+ProductName+"','"+ProductPrice+"')";
+            String addProduct="insert into Product (id,name,price, quantity ) values('"+id+"','"+ProductName+"','"+ProductPrice+"')";
             PreparedStatement preparedStatement =connection.prepareStatement(addProduct);
             int result =preparedStatement.executeUpdate();
             System.out.println(result);

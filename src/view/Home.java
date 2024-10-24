@@ -297,7 +297,9 @@ public class Home extends JFrame {
                     String name = scanner.next();
                     System.out.print("Enter product price: ");
                     double price = scanner.nextDouble();
-                    product.addProduct(name, price);
+                    System.out.print("Enter product price: ");
+                    double quantity = scanner.nextDouble();
+                    product.addProduct(name, price ,quantity);
                     break;
                 case 2:
                     product.displayProducts();
